@@ -95,12 +95,13 @@ a{
 .promo{
     display: flex;
     justify-content: center;
-    max-width: 1400px;
+    
     
 }
 img.promo-img{
     display: flex;
     border-radius: 25px;
+    max-width: 1500px;
    
    
 }
