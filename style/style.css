@@ -1,0 +1,68 @@
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+img.logo2{
+    width: 200px;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    
+    background-color: rgb(241, 241, 241);
+    
+}
+
+nav {
+    flex-grow: 1;
+    
+    
+}
+nav ul li {
+    
+    margin-left: 30px;
+    
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    
+}
+nav ul li{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    position: relative;
+    top: 40px;
+}
+.sign_up{
+    
+    display: flex;
+    justify-content: center;
+    background-image: url(../assets/image/bg-sing_up.jpg) ;
+    background-size: cover;
+}
+.sign{
+    height: 600px;
+}
+.promo{
+    display: flex;
+}
+.promo.promo-img{
+    display: flex;
+}
+
+footer{
+    background-color: rgb(241, 241, 241);
+}
+html{
+    background-color: rgb(241, 241, 241);
+}
