@@ -31,34 +31,36 @@
     <div class="images">    
         
 
-    <div class="card">
-                <img src="assets/image/" class="card-img">
-        </div> 
+    
             
 <?php
 // Параметры для подключения
 $db_host = "127.127.126.26"; 
-$db_user = "root"; // Логин БД
+$db_user = "root";// Логин БД
 $db_password = "^ruS7]u56^£L"; // Пароль БД
 $db_base = 'kino'; // Имя БД
 $db_table = "picture"; // Имя Таблицы БД
-$db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
-      // Устанавливаем корректную кодировку
-$db->exec("set names utf8");
+$mysqli = mysqli_connect("127.127.126.26", "root","^ruS7]u56^£L",'kino' );
+
+// $mysqli->exec("set names utf8");
 ?>
 
 <?php
-$sql = SELECT * FROM picture;
-$result = execute($sql);
-while ($array = $result -> fetch(PDO::FETCH_ASSOC))
+$query = "SELECT * FROM picture";
+$result = mysqli_query ($mysqli, $query);
+
+foreach ($result as $row)
 {
 
-         echo   '<div class="card">
-                <img src="assets/image/'.$array['picture'].'" class="card-img">
+        echo   '<div class="card">
+            <img src="assets/image/'.$row['picture'].'" class="card-img">
         </div>';
-} 
-?>
+}
 
+ 
+
+?>
+<!-- 
 
         <div class="card">
             <img src="assets/image/sumerki.jpg" class="card-img">
@@ -115,7 +117,7 @@ while ($array = $result -> fetch(PDO::FETCH_ASSOC))
        
             <div class="card">
                 <img src="assets/image/elvin and burunduk.jpg" class="card-img">
-            </div> 
+            </div>  -->
 
 
         
