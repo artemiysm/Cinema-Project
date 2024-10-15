@@ -5,10 +5,7 @@
     justify-content: center; /* Центрирование карточек */
 
 }
-.row {
-    display: flex;
-    
-}
+
 
 .card {
     box-sizing: border-box;

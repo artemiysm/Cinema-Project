@@ -31,7 +31,7 @@ try {
       $query = $db->prepare("INSERT INTO $db_table (user, pasword) values (:user, :pasword)");
       // Выполняем запрос с данными
       $query->execute($data);
-      
+      header(../index.html);
   } 
 catch (PDOException $e) {
     // Если есть ошибка соединения или выполнения запроса, выводим её
