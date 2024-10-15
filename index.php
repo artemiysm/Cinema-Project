@@ -31,15 +31,33 @@
     <div class="images">    
         
 
-
-            <div class="card">
-                <img src="assets/image/need for speed.jpg" class="card-img">
+    <div class="card">
+                <img src="assets/image/" class="card-img">
         </div> 
+            
+<?php
+// Параметры для подключения
+$db_host = "127.127.126.26"; 
+$db_user = "root"; // Логин БД
+$db_password = "^ruS7]u56^£L"; // Пароль БД
+$db_base = 'kino'; // Имя БД
+$db_table = "picture"; // Имя Таблицы БД
+$db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
+      // Устанавливаем корректную кодировку
+$db->exec("set names utf8");
+?>
 
+<?php
+$sql = SELECT * FROM picture;
+$result = execute($sql);
+while ($array = $result -> fetch(PDO::FETCH_ASSOC))
+{
 
-            <div class="card">
-                <img src="assets/image/Форсаж_8.jpg" class="card-img">
-        </div> 
+         echo   '<div class="card">
+                <img src="assets/image/'.$array['picture'].'" class="card-img">
+        </div>';
+} 
+?>
 
 
         <div class="card">
