@@ -60,68 +60,6 @@ foreach ($result as $row)
  
 
 ?>
-<!-- 
-
-        <div class="card">
-            <img src="assets/image/sumerki.jpg" class="card-img">
-        </div> 
-
-
-    
-        <div class="card">
-            <img src="assets/image/gari potter 3.jpg" class="card-img">
-        </div> 
-    
-
-    
-        <div class="card">
-            <img src="assets/image/50 оттенков серого.jpg" class="card-img">
-        </div> 
-        
-
-    
-        <div class="card">
-            <img src="assets/image/raven.jpg" class="card-img">
-        </div> 
-    
-
-    
-        <div class="card">
-            <img src="assets/image/anabel.jpg" class="card-img">
-        </div> 
-    
-
-   
-        <div class="card">
-            <img src="assets/image/joker.jpg" class="card-img">
-    </div> 
-    
-
-    
-        <div class="card">
-            <img src="assets/image/killer akame.jpg" class="card-img">
-        </div> 
-
-        
-            <div class="card">
-                <img src="assets/image/atack titans.jpg" class="card-img">
-            </div> 
-       
-
-        
-            <div class="card">
-                <img src="assets/image/luntik.jpg" class="card-img">
-            </div> 
-        
-
-       
-            <div class="card">
-                <img src="assets/image/elvin and burunduk.jpg" class="card-img">
-            </div>  -->
-
-
-        
-      
         
     </div>
 
