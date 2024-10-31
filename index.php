@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style/style2.css">
+    <link rel="stylesheet" href="../style/style2.css">
 </head>
 <body>
 <div class="header">
@@ -16,7 +16,7 @@
                 
                     <img class="logo2" src="assets/image/logo.png" alt="">
                 <li><a href="#">Новости</a></li>
-                <li><a href="pages/sign_up.html">Авторизация</a></li>
+                <li><a href="pages/auth/auth.html">Авторизация</a></li>
 
             </ul>
             
@@ -60,6 +60,68 @@ foreach ($result as $row)
  
 
 ?>
+<!-- 
+
+        <div class="card">
+            <img src="assets/image/sumerki.jpg" class="card-img">
+        </div> 
+
+
+    
+        <div class="card">
+            <img src="assets/image/gari potter 3.jpg" class="card-img">
+        </div> 
+    
+
+    
+        <div class="card">
+            <img src="assets/image/50 оттенков серого.jpg" class="card-img">
+        </div> 
+        
+
+    
+        <div class="card">
+            <img src="assets/image/raven.jpg" class="card-img">
+        </div> 
+    
+
+    
+        <div class="card">
+            <img src="assets/image/anabel.jpg" class="card-img">
+        </div> 
+    
+
+   
+        <div class="card">
+            <img src="assets/image/joker.jpg" class="card-img">
+    </div> 
+    
+
+    
+        <div class="card">
+            <img src="assets/image/killer akame.jpg" class="card-img">
+        </div> 
+
+        
+            <div class="card">
+                <img src="assets/image/atack titans.jpg" class="card-img">
+            </div> 
+       
+
+        
+            <div class="card">
+                <img src="assets/image/luntik.jpg" class="card-img">
+            </div> 
+        
+
+       
+            <div class="card">
+                <img src="assets/image/elvin and burunduk.jpg" class="card-img">
+            </div>  -->
+
+
+        
+      
         
     </div>
 
