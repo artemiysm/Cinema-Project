@@ -16,7 +16,7 @@
                     
                         <img class="logo" src="/assets/image/logo.png" alt="">
                     <li><a href="#">Новости</a></li>
-                    <li><a href="/pages/sign_up.html">Авторизация</a></li>
+                    <li><a href="../auth/auth.html">Авторизация</a></li>
     
                 </ul>
                 

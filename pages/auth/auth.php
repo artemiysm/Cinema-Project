@@ -9,42 +9,26 @@
     
     <?php
 if (isset($_POST['user']) && isset($_POST['pasword'])){
-  // Переменные с формы
   $user = $_POST['user'];
   $pasword = $_POST['pasword'];
+  $pass = password_hash($pasword,PASSWORD_BCRYPT);
+  $hash = $pass;
   
-$hash = $pasword['pasword'];
-  
-if (password_verify($pasword, $hash)) { 
-// Password is correct! // Log the user in here. 
-} 
-else { // Invalid password 
-}
   // Параметры для подключения
   $db_host = "127.127.126.26"; 
   $db_user = "root"; // Логин БД
   $db_password = "^ruS7]u56^£L"; // Пароль БД
   $db_base = 'kino'; // Имя БД
   $db_table = "users"; // Имя Таблицы БД
-  
-try {
-      // Подключение к базе данных
-      $db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
-      // Устанавливаем корректную кодировку
-      $db->exec("set names utf8");
-      // Собираем данные для запроса
-      $data = array( 'user' => $user, 'pasword' => $pass ); 
-      // Подготавливаем SQL-запрос
-      $query = $db->prepare("SELECT (user, pasword) FROM $db_table");
-      // Выполняем запрос с данными
-      $query->execute($data);
 
-  } 
-catch (msqli_ecxeption $e) {
-    // Если есть ошибка соединения или выполнения запроса, выводим её
-    print "Ошибка!: " . $e->getMessage() . "<br/>";
+  if (password_verify($pasword,$hash)){
+    echo 'Pasword correct';
+  }
+  else{
+    echo 'Password incorrect';
   }
 }
+  
 
 ?>
 

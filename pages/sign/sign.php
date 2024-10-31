@@ -14,12 +14,6 @@ if (isset($_POST['user']) && isset($_POST['pasword'])){
   $pasword = $_POST['pasword'];
   $pass = password_hash($pasword,PASSWORD_BCRYPT);
   $hash = $pass;
-  if (password_verify($pasword,$hash)){
-    echo 'Password correct';
-  }
-  else{
-    echo 'Password incorrect';
-  }
   
   // Параметры для подключения
   $db_host = "127.127.126.26"; 
@@ -39,6 +33,7 @@ try {
       $query = $db->prepare("INSERT INTO $db_table (user, pasword) values (:user, :pasword)");
       // Выполняем запрос с данными
       $query->execute($data);
+      header('Location: https://cinema-chaika/index.php'); exit( );
 
   } 
 catch (msqli_ecxeption $e) {
