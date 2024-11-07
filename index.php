@@ -13,7 +13,6 @@
             <ul>
                 <li><a href="#">Пушкинская карта</a></li>
                 <li><a href="#">О нас</a></li>
-                
                     <img class="logo2" src="assets/image/logo.png" alt="">
                 <li><a href="#">Новости</a></li>
                 <li><a href="pages/auth/auth.html">Авторизация</a></li>
