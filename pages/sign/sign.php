@@ -8,42 +8,51 @@
 <body>
     
     <?php
-if (isset($_POST['user']) && isset($_POST['pasword'])){
+if (isset($_POST['user']) && isset($_POST['pasword'])) {
   // Переменные с формы
   $user = $_POST['user'];
   $pasword = $_POST['pasword'];
-  $pass = password_hash($pasword,PASSWORD_BCRYPT);
-  $hash = $pass;
-  
+  $pass = password_hash($pasword, PASSWORD_BCRYPT);
+
   // Параметры для подключения
   $db_host = "127.127.126.26"; 
-  $db_user = "root"; // Логин БД
-  $db_password = "^ruS7]u56^£L"; // Пароль БД
-  $db_base = 'kino'; // Имя БД
-  $db_table = "users"; // Имя Таблицы БД
-  
-try {
-      // Подключение к базе данных
-      $db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
-      // Устанавливаем корректную кодировку
-      $db->exec("set names utf8");
-      // Собираем данные для запроса
-      $data = array( 'user' => $user, 'pasword' => $pass ); 
-      // Подготавливаем SQL-запрос
-      $query = $db->prepare("INSERT INTO $db_table (user, pasword) values (:user, :pasword)");
-      // Выполняем запрос с данными
-      $query->execute($data);
-      header('Location: https://cinema-chaika/index.php'); exit( );
+  $db_user = "root";
+  $db_password = "^ruS7]u56^£L";
+  $db_base = 'kino';
+  $db_table = 'users'; // Определяем таблицу
 
-  } 
-catch (msqli_ecxeption $e) {
-    // Если есть ошибка соединения или выполнения запроса, выводим её
-    print "Ошибка!: " . $e->getMessage() . "<br/>";
+  // Подключение к базе данных через mysqli
+  $con = new mysqli($db_host, $db_user, $db_password, $db_base);
+
+  // Проверка соединения
+  if ($con->connect_error) {
+      die("Ошибка подключения: " . $con->connect_error);
   }
+
+  // Устанавливаем корректную кодировку
+  $con->set_charset("utf8");
+
+  // Подготавливаем SQL-запрос
+  $query = $con->prepare("INSERT INTO $db_table (user, pasword) VALUES (?, ?)");
+  if ($query === false) {
+      die("Ошибка подготовки запроса: " . $con->error);
+  }
+
+  // Привязываем параметры и выполняем запрос
+  $query->bind_param("ss", $user, $pass);
+  if ($query->execute()) {
+      // Перенаправляем пользователя
+      header('Location: https://cinema-chaika/');
+      exit();
+  } else {
+      echo "Ошибка выполнения запроса: " . $query->error;
+  }
+
+  // Закрываем соединение
+  $query->close();
+  $con->close();
 }
-
 ?>
-
 
 </body>
 </html>

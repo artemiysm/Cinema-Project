@@ -60,16 +60,77 @@ foreach ($result as $row)
  
 
 ?>
+<!-- 
+
+        <div class="card">
+            <img src="assets/image/sumerki.jpg" class="card-img">
+        </div> 
+
+
+    
+        <div class="card">
+            <img src="assets/image/gari potter 3.jpg" class="card-img">
+        </div> 
+    
+
+    
+        <div class="card">
+            <img src="assets/image/50 оттенков серого.jpg" class="card-img">
+        </div> 
+        
+
+    
+        <div class="card">
+            <img src="assets/image/raven.jpg" class="card-img">
+        </div> 
+    
+
+    
+        <div class="card">
+            <img src="assets/image/anabel.jpg" class="card-img">
+        </div> 
+    
+
+   
+        <div class="card">
+            <img src="assets/image/joker.jpg" class="card-img">
+    </div> 
+    
+
+    
+        <div class="card">
+            <img src="assets/image/killer akame.jpg" class="card-img">
+        </div> 
 
         
-</div>
+            <div class="card">
+                <img src="assets/image/atack titans.jpg" class="card-img">
+            </div> 
+       
+
+        
+            <div class="card">
+                <img src="assets/image/luntik.jpg" class="card-img">
+            </div> 
+        
+
+       
+            <div class="card">
+                <img src="assets/image/elvin and burunduk.jpg" class="card-img">
+            </div>  -->
+
+
+        
+      
+        
+    </div>
 
     <div class="footer">
         <footer>
             <nav>
                 <ul>
                     <li><a href="#">О нас</a></li>
-                    <li><a href="pages\gift_card\gift_card.html">Подарочные карты</a></li>
+                    <li><a href="#">Подарочные карты</a></li>
                     <div class="logo-card"></div>
                         
                     <li><a href="#">Расмотрение претензий</a></li>

@@ -6,16 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    
 <?php
-session_start();
+session_start(); // Начинаем сессию для хранения информации о пользователе
 
 if (isset($_POST['user']) && isset($_POST['pasword'])) {
     // Переменные с формы
     $user = $_POST['user'];
     $pasword = $_POST['pasword'];
 
-    // Параметры для подключения
+    // Параметры для подключения к базе данных
     $db_host = "127.127.126.26"; 
     $db_user = "root"; 
     $db_password = "^ruS7]u56^£L"; 
@@ -43,15 +42,20 @@ if (isset($_POST['user']) && isset($_POST['pasword'])) {
 
     // Проверка пароля
     if ($hashed_password_from_db && password_verify($pasword, $hashed_password_from_db)) {
-        // Пароль верный, сохраняем информацию о пользователе в сессии
-        $_SESSION['username'] = $user;
+        // Пароль верный, проверяем роль пользователя
+        if ($role_id == 2) { // Предполагаем, что роль администратора имеет role_id = 2
+            echo "Добро пожаловать, администратор!";
+        }
+
+        // Сохраняем информацию о пользователе в сессии
+        $_SESSION['user'] = $user;
         $_SESSION['role_id'] = $role_id;
 
-        // Перенаправляем пользователя
-        header('Location: https://cinema-chaika/');
+        // Перенаправляем пользователя на главную страницу после успешной авторизации
+        
         exit();
     } else {
-        // Неверный логин или пароль
+        // Неверный пароль или пользователь не найден
         echo 'Неправильный логин или пароль';
     }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
     <div class="header">
@@ -27,7 +27,7 @@
     <div class="sign_up">
         <div class="sign">
             
-        <form action="auth.php" method="POST">
+        <form action="admin_auth.php" method="POST">
             <div class="signing">
                 <img class="logo2" src="../../assets/image/logo.png" alt="">
                 <p>Имя пользователя: </p>
@@ -35,7 +35,7 @@
             <p>Пароль: </p>
             <input class="sign_password" name="pasword" type="password" id="password"/>
             <input class = "submit" type="submit" value="Войти"/>
-            <a href="../sign/sign_up.php"><p>Ещё не зарегистрированны?</p></a>
+            <a href="../pages/sign/sign_up.php"><p>Ещё не зарегистрированны?</p></a>
             </div>
 </div>
     </div>
@@ -58,3 +58,4 @@
 </form>
 </body>
 </html>
+    
