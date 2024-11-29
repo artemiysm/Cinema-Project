@@ -35,7 +35,6 @@
             <p>Пароль: </p>
             <input class="sign_password" name="pasword" type="password" id="password"/>
             <input class = "submit" type="submit" value="Войти"/>
-            <a href="../pages/sign/sign_up.php"><p>Ещё не зарегистрированны?</p></a>
             </div>
 </div>
     </div>

@@ -15,10 +15,7 @@ if (isset($_POST['user']) && isset($_POST['pasword'])) {
   $pass = password_hash($pasword, PASSWORD_BCRYPT);
 
   // Параметры для подключения
-  $db_host = "127.127.126.26"; 
-  $db_user = "root";
-  $db_password = "^ruS7]u56^£L";
-  $db_base = 'kino';
+  include('../../Mysql_connect.php');
   $db_table = 'users'; // Определяем таблицу
 
   // Подключение к базе данных через mysqli

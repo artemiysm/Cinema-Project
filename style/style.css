@@ -2,14 +2,16 @@ nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    align-items: center; /* Align items vertically */
 }
-img{
-    width:200px;
+img {
+    width: 190px;
 }
-img.logo{
-    width: 200px;
+a img.logo,
+a img {
+    width: 190px; /* Adjust the width to make the image smaller */
 }
-img.logo2{
+img.logo2 {
     width: 150px;
     display: block;
     margin-left: auto;
@@ -17,57 +19,50 @@ img.logo2{
 }
 header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 20px;
     background-color: rgb(241, 241, 241);
     border-bottom: 1px solid #ddd;
 }
 nav {
     flex-grow: 1;
-    
 }
 nav ul li {
-    
     margin-left: 30px;
-    
 }
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    
 }
-a  {
+a {
     position: relative;
-    top: 40px;
-    font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     transform: scale(130%);
 }
-.sign_up{
-    
+.sign_up {
     display: flex;
     justify-content: center;
-    background-image: url(../assets/image/bg-sing_up.jpg) ;
+    background-image: url(../assets/image/bg-sing_up.jpg);
     background-size: cover;
 }
-.sign{
+.sign {
     height: 600px;
 }
-.promo{
+.promo {
     display: flex;
 }
-.promo.promo-img{
+.promo.promo-img {
     display: flex;
 }
-
-footer{
+footer {
     background-color: rgb(241, 241, 241);
 }
-html{
+html {
     background-color: rgb(241, 241, 241);
 }
-.signing{
-    display:flex;
+.signing {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 80px;
@@ -76,11 +71,10 @@ html{
     background-color: #efefef;
     border-radius: 10px;
 }
-input{
-    
+input {
     margin-bottom: 10px;
 }
-.sign_name{
+.sign_name {
     height: 25px;
     width: 250px;
     border-radius: 7px;
@@ -89,7 +83,7 @@ input{
     margin-right: auto;
     background-color: #ddd;
 }
-.sign_password{
+.sign_password {
     height: 25px;
     width: 250px;
     border-radius: 7px;
@@ -98,29 +92,28 @@ input{
     margin-right: auto;
     background-color: #ddd;
 }
-.submit{
+.submit {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    width:140px;
+    width: 140px;
     height: 25px;
     color: white;
     border-radius: 7px;
     background-color: rgb(0, 113, 200);
     transform: scale(140%);
     transition: box-shadow 1s 200ms;
-
 }
-.submit:hover{
+.submit:hover {
     box-shadow: 5px 5px 9px black;
 }
-p{
+p {
     transform: scale(110%);
     margin-left: 25%;
     margin-top: 10px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-a p{
+a p {
     text-decoration: none;
     transform: scale(110%);
 }
