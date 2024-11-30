@@ -65,3 +65,7 @@ h1{
 .checkout-button:hover {
     background-color: #45a049;
 }
+.about_img{
+    background-image: url("../assets/image/about_as.jpg");
+    background-size: cover;
+}

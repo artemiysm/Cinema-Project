@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-// Инициализация корзины, если она еще не существует
+
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-// Обработка добавления товара в корзину
+
 if (isset($_GET['add_to_cart'])) {
     $product_name = $_GET['add_to_cart'];
     $product_price = $_GET['price'];
@@ -15,7 +15,7 @@ if (isset($_GET['add_to_cart'])) {
     } else {
         $_SESSION['cart'][$product_name] = ['quantity' => 1, 'price' => $product_price];
     }
-    header("Location: index.php"); // Перенаправление на главную страницу после добавления товара
+    header("Location: index.php");
     exit;
 }
 ?>
@@ -35,7 +35,7 @@ if (isset($_GET['add_to_cart'])) {
             <nav>
                 <ul>
                     <li><a href="#">Пушкинская карта</a></li>
-                    <li><a href="#">О нас</a></li>
+                    <li><a href="/pages/about/about.php">О нас</a></li>
                     <img class="logo2" src="assets/image/logo.png" alt="">
                     <li><a href="#">Новости</a></li>
 
@@ -62,7 +62,7 @@ if (isset($_GET['add_to_cart'])) {
         include('Mysql_connect.php');
         $mysqli = mysqli_connect($db_host, $db_user, $db_password, $db_base);
 
-        // Проверка соединения
+        
         if (!$mysqli) {
             die("Connection failed: " . mysqli_connect_error());
         }

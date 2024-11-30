@@ -1,8 +1,8 @@
 .images {
     display: flex;
-    flex-wrap: wrap; /* Элементы будут переноситься на следующую строку, если не помещаются */
-    gap: 20px; /* Расстояние между карточками */
-    justify-content: center; /* Центрирование карточек */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 
 }
 .row {
