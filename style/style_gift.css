@@ -4,63 +4,65 @@ nav ul {
     list-style-type: none;
 }
 
-img.logo{
+img.logo {
     width: 200px;
 }
 
 header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 20px;
     background-color: rgb(241, 241, 241);
     border-bottom: 1px solid #ddd;
 }
+
 nav {
     flex-grow: 1;
-    
 }
+
 nav ul li {
-    
     margin-left: 30px;
-    
 }
+
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    
 }
-a  {
+
+a {
     position: relative;
     top: 40px;
-    font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     transform: scale(130%);
 }
 
-footer{
+footer {
     background-color: rgb(241, 241, 241);
 }
-html{
+
+html {
     background-color: #efefef;
 }
 
-p{
-    
+p {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-a p{
+
+a p {
     text-decoration: none;
     transform: scale(110%);
 }
-.info_card{
+
+.info_card {
     display: flex;
     width: 540px;
     height: 420px;
     flex-direction: column;
     flex-wrap: wrap;
-    
 }
-.card{
+
+.card {
     display: flex;
     height: 330px;
     width: 570px;
@@ -69,18 +71,62 @@ a p{
     margin-right: auto;
     border-radius: 20px;
     background-color: white;
-    
 }
-.info_card h2{
-    text-align:left;
+
+.info_card h2 {
+    text-align: left;
     margin-left: 30px;
 }
-.info_card p{
+
+.info_card p {
     text-align: left;
     margin-left: 20px;
     transform: scale(100%);
 }
-p{
+
+p {
     text-align: center;
     transform: scale(130%);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .info_card {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .card {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .info_card {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .card {
+        width: 95%;
+        margin: 10px auto;
+    }
 }
